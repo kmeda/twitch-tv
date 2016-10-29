@@ -7,17 +7,13 @@
 		background-color: rgba(28, 28, 28, 0.6)
 
 		.container
-			//display: flex
-			flex-direction: column
-			justify-content: flex-start
-			align-items: center
 			width: 800px
 			height: 100%
 			background-color: rgba(227, 242, 240, 0.2)
 			margin-left: auto
 			margin-right: auto
-			border-left: 3px solid black
-			border-right: 3px solid black
+			border-left: 2px solid rgb(0, 255, 186)
+			border-right: 2px solid rgb(0, 255, 186)
 			margin-bottom: 25px
 			position: relative
 
@@ -29,62 +25,79 @@
 				height: 20%
 				margin-left: auto
 				margin-right: auto
-				//background-color: rgba(227, 242, 240, 0.7)
 
 				.all-btns
 					height: 100px
 					width: 100%
 					position: relative
-					//background-color: rgba(227, 242, 240, 0.9)
-					//padding-top: 30px
-
-
-
 
 					.btn-big
 						height: 100px
 						width: 100px
 						position: absolute
-						background-color: rgb(141, 52, 242)
+						background:
+							image: url(../images/TwitchTv.png)
+							size: cover
+							repeat: no-repeat
 						border-radius: 50%
-						border: 4px solid rgb(0, 255, 186)
-						box-shadow: 2px 5px 20px rgba(227, 242, 240, 0.9)
+						border: 5px solid rgb(0, 255, 186)
+						box-shadow: 0 5px 25px rgba(227, 242, 240, 0.8)
+						cursor: pointer
 					.buttons-panel
 						display: flex
 						width: 700px
 						height: 80%
-						background-color: rgba(4, 23, 18, 0.6)
+						background-color: rgba(4, 23, 18, 0.9)
 						margin-left: 50px
 						border-radius: 10px
 						border: 3px solid rgb(0, 255, 186)
-						.online, .offline
-							display: inline-block
-							height: 40px
-							width: 40px
+						.all, .online, .offline
+							display: inline-flex
+							justify-content: center
+							align-items: center
+							height: 30px
+							width: 30px
 							border-radius: 50%
 							margin-top: 30px
 							border: 2px solid rgb(0, 255, 186)
-							box-shadow: 1px 2px 10px rgba(227, 242, 240, 0.9)
-						.online
-							background-color: green
+							box-shadow: 0 0 10px rgba(227, 242, 240, 0.9)
+							color: white
+							font-weight: bold
+							font-size: 0.7em
+							cursor: pointer
+						.all
+							background:
+								image: url(../images/blue-btn.png)
+								size: contain
+								repeat: no-repeat
 							margin-left: 70px
-						.offline
-							background-color: red
+						.online
+							background:
+								image: url(../images/green-btn.png)
+								size: contain
+								repeat: no-repeat
 							margin-left: 10px
+						.offline
+							background:
+								image: url(../images/red-btn.png)
+								size: contain
+								repeat: no-repeat
+							margin-left: 10px
+
 						.twitch
 							height: 100%
 							display: flex
-							justify-content: center
-							align-items: center
-							color: white
+							justify-content: flex-start
+							align-items: flex-start
+							color: rgb(255, 131, 17)
 							margin-left: 70px
 							font-size: 3em
 							font-family: cursive
+							margin: 0 50px
 
 			.channel-block
 				width: 80%
 				height: 80%
-				//background-color: rgba(227, 242, 240, 0.3)
 				margin-left: 10%
 				position: absolute
 				overflow-y: scroll
@@ -98,7 +111,6 @@
 					align-items: flex-end
 					width: 95%
 					height: 60px
-					//background-color: rgba(227, 242, 240, 0.9)
 					margin-top: 10px
 					margin-left: auto
 					margin-right: auto
@@ -110,12 +122,12 @@
 						position: absolute
 						background-color: rgb(141, 52, 242)
 						border-radius: 50%
-						border: 2px solid rgb(0, 255, 186)
-						box-shadow: 1px 2px 10px rgba(227, 242, 240, 0.9)
+						border: 3px solid rgb(0, 255, 186)
+						box-shadow: 0 0 15px rgba(227, 242, 240, 0.8)
 					.stream
 						display: flex
-						justify-content: center
-						align-items: center
+						//justify-content: center
+						//align-items: center
 						color: white
 						font-size: 0.8em
 						font-family: 'Fira sans'
@@ -123,12 +135,21 @@
 						height: 70%
 						background-color: rgba(4, 23, 18, 0.9)
 						margin-left: 30px
-						border-bottom-right-radius: 0
-						border-top-right-radius: 10px
+						border-radius: 7px
 						border: 1px solid rgb(0, 255, 186)
-
-
-
+						a, .name
+							display: flex
+							justify-content: center
+							align-items: center
+							height: 100%
+							width: 35%
+							color: white
+						.status
+							display: flex
+							justify-content: center
+							align-items: center
+							height: 100%
+							width: 65%
 
 .footer
 	width: 100%
