@@ -132,13 +132,5 @@ stream - null
        - display_name
        - logo
        - url
-       -
-
-
-       $('.online').on('click', function(){});
-
-       $('.offline').on('click', function(){});
-
-
 
 */
