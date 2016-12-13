@@ -5,7 +5,7 @@ var channelArr = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbec
 function getAllChannels(){
   $('.channel-block').empty();
   channelArr.forEach(function(channel){
-    $.getJSON("https://wind-bow.hyperdev.space/twitch-api/streams/"+channel+"?callback=?", function(stream){
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/"+channel+"?callback=?", function(stream){
       var channelStatus;
       if (stream.stream == null){
         channelStatus = "offline";
@@ -17,7 +17,8 @@ function getAllChannels(){
         channelStatus = stream.stream.channel.status;
       }
 
-      $.getJSON("https://wind-bow.hyperdev.space/twitch-api/channels/"+channel+"?callback=?", function(channel){
+      $.getJSON("https://wind-bow.gomix.me/twitch-api/channels/"+channel+"?callback=?", function(channel){
+
           channelName = channel.display_name;
           channelLogo = channel.logo;
           channelURL = channel.url;
@@ -35,7 +36,7 @@ function getAllChannels(){
 function getOnlineChannels(){
   $('.channel-block').empty();
   channelArr.forEach(function(channel){
-    $.getJSON("https://wind-bow.hyperdev.space/twitch-api/streams/"+channel+"?callback=?", function(stream){
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/"+channel+"?callback=?", function(stream){
       var channelStatus;
       if (stream.stream == null){
         channelStatus = "offline";
@@ -47,7 +48,7 @@ function getOnlineChannels(){
         channelStatus = stream.stream.channel.status;
       }
 
-      $.getJSON("https://wind-bow.hyperdev.space/twitch-api/channels/"+channel+"?callback=?", function(channel){
+      $.getJSON("https://wind-bow.gomix.me/twitch-api/channels/"+channel+"?callback=?", function(channel){
           channelName = channel.display_name;
           channelLogo = channel.logo;
           channelURL = channel.url;
@@ -68,7 +69,7 @@ function getOnlineChannels(){
 function getOfflineChannels(){
   $('.channel-block').empty();
   channelArr.forEach(function(channel){
-    $.getJSON("https://wind-bow.hyperdev.space/twitch-api/streams/"+channel+"?callback=?", function(stream){
+    $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/"+channel+"?callback=?", function(stream){
       var channelStatus;
       if (stream.stream == null){
         channelStatus = "offline";
@@ -80,7 +81,7 @@ function getOfflineChannels(){
         channelStatus = stream.stream.channel.status;
       }
 
-      $.getJSON("https://wind-bow.hyperdev.space/twitch-api/channels/"+channel+"?callback=?", function(channel){
+      $.getJSON("https://wind-bow.gomix.me/twitch-api/channels/"+channel+"?callback=?", function(channel){
           channelName = channel.display_name;
           channelLogo = channel.logo;
           channelURL = channel.url;
